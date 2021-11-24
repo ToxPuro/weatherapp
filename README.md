@@ -5,6 +5,9 @@ There are three docker-compose.yml files:
   * test.yml this is an environment for robot integration tests
   * deploy.yml this is for deploying to AWS
 
+Spin docker-compose up with: sudo docker-compose -f <yml-file name here> up
+sudo is only required if you don't have full docker access rights
+
 ### Node and React development
 
 The current version uses geolocation data, falls back on Helsinki if no geolocation data.
