@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  tasks:
+
+    - name: Clone repo
+      ansible.builtin.git:
+        repo: https://github.com/eficode/weatherapp.git
+        dest: weatherapp
+
+
+    - name: install backend denpendencies
+      command: chdir=test/backend npm install
+
+    - name: install frontend denpendencies
+      command: chdir=test/frontend npm install
+      
+
+
+

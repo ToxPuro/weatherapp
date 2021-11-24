@@ -10,26 +10,38 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --progress --inline --colors",
-    "lint": "node_modules/.bin/eslint --ext .js --ext .jsx ."
+    "lint": "node_modules/.bin/eslint --ext .js --ext .jsx .",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/register": "^7.16.0",
+    "babel-preset-es2015": "^6.24.1",
+    "mocha": "^9.1.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.5",
+    "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/polyfill": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.3.1",
     "babel-loader": "^8.1.0",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
+    "global-jsdom": "^8.3.0",
     "html-webpack-plugin": "^4.4.1",
+    "jest": "^27.3.1",
+    "jsdom": "^18.1.1",
+    "mocha-jsdom": "^2.0.0",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",

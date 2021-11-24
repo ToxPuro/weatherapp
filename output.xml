@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.8.8 on linux)" generated="20211124 07:07:16.250" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="/home/toukopuro/weatherapp/tests">
+<suite id="s1-s1" name="Test" source="/home/toukopuro/weatherapp/tests/test.robot">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open And Configure Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open And Configure Browser" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 07:07:16.371" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211124 07:07:16.371" endtime="20211124 07:07:17.487"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1400</arg>
+<arg>600</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20211124 07:07:17.487" endtime="20211124 07:07:17.593"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211124 07:07:17.593" endtime="20211124 07:07:17.594"/>
+</kw>
+<status status="PASS" starttime="20211124 07:07:16.370" endtime="20211124 07:07:17.594"/>
+</kw>
+<status status="PASS" starttime="20211124 07:07:16.370" endtime="20211124 07:07:17.594"/>
+</kw>
+<test id="s1-s1-t1" name="Data Should Be Correctly Shown">
+<kw name="Go To Main Page" library="resource">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211124 07:07:17.595" level="INFO">Opening url 'http://localhost:8000'</msg>
+<status status="PASS" starttime="20211124 07:07:17.595" endtime="20211124 07:07:21.328"/>
+</kw>
+<status status="PASS" starttime="20211124 07:07:17.595" endtime="20211124 07:07:21.329"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>light rain</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211124 07:07:23.354" level="INFO">Current page contains text 'light rain'.</msg>
+<status status="PASS" starttime="20211124 07:07:21.330" endtime="20211124 07:07:23.355"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>broken clouds</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211124 07:07:25.373" level="INFO">Current page contains text 'broken clouds'.</msg>
+<status status="PASS" starttime="20211124 07:07:23.355" endtime="20211124 07:07:25.373"/>
+</kw>
+<status status="PASS" starttime="20211124 07:07:17.594" endtime="20211124 07:07:25.374"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211124 07:07:25.377" endtime="20211124 07:07:26.438"/>
+</kw>
+<status status="PASS" starttime="20211124 07:07:16.267" endtime="20211124 07:07:26.438"/>
+</suite>
+<status status="PASS" starttime="20211124 07:07:16.250" endtime="20211124 07:07:26.443"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">Tests.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

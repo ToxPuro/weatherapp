@@ -1,0 +1,25 @@
+version: '3'
+services:
+    frontend:
+        image: toxpuro/weatherapp_frontend
+        ports:
+            - 8000:8000
+        volumes:
+            - ./frontend/src:/usr/src/app/src
+    backend:
+        image: toxpuro/weatherapp_backend
+        ports:
+            - 9000:9000
+        volumes:
+            - ./backend/src:/usr/src/app/src
+        environment:
+            - MAP_ENDPOINT=http://dummy:5000/data
+
+    dummy:
+        image: toxpuro/weatherapp_dummy
+        ports:
+            -   5000:5000
+        volumes:
+            - ./tests/dummy/src:/usr/src/app/src
+        
+      

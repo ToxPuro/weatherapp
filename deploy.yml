@@ -1,0 +1,17 @@
+version: '3'
+services:
+    backend:
+        image: toxpuro/weatherapp_backend
+        ports:
+            - 9000:9000
+        volumes:
+            - ./backend/src:/usr/src/app/src
+    frontend:
+        image: toxpuro/weatherapp_frontend
+        ports:
+            - 8000:8000
+        volumes:
+            - ./frontend/src:/usr/src/app/src
+        environment:
+          - ENDPOINT=http://ec2-18-118-136-134.us-east-2.compute.amazonaws.com:9000/api
+      
